@@ -4,7 +4,7 @@ export function Bin2Dec(binNum) {
 
   typoNumbers = verifyBinary(value);
 
-  if (!verifyNumber(value)) return "Valor inválido.";
+  if (!numberIsValid(value)) return "Valor inválido.";
   if (typoNumbers.length) return typoNumbers;
 
   let numElements = value.length - 1;
@@ -17,18 +17,26 @@ export function Bin2Dec(binNum) {
   return decNumber;
 }
 
-const verifyNumber = (value) => {
-  if (!verifyType(value)) return false;
-  if (verifyLength(value)) return false;
-  if (onlyNumbers(value)) return false;
-  return true;
+const numberIsValid = (value) => {
+  const validation = [
+    itsNotString(value),
+    lengthBiggerThanEight(value),
+    hasSpecialCaracters(value),
+    hasOnlyNumbers(value),
+  ];
+
+  let result = validation.some((functionResult) => functionResult);
+  return !result;
 };
 
-const verifyType = (value) => typeof value === "string";
+const itsNotString = (value) => typeof value !== "string";
 
-const verifyLength = (value) => value.length > 8;
+const lengthBiggerThanEight = (value) => value.length > 8;
 
-const onlyNumbers = (value) => isNaN(parseFloat(value));
+const hasSpecialCaracters = (value) =>
+  /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(value);
+
+const hasOnlyNumbers = (value) => isNaN(parseFloat(value));
 
 function verifyBinary(value) {
   const decNumbers = [];
