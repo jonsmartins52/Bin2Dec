@@ -1,7 +1,7 @@
 Button {
-  background-color: #e4cfc4;
+  background-color: var(--primaryColor);
   border: none;
-  color: #869ea4;
+  color: var(--backgroundColor);
   font-size: var(--fontSize);
   font-weight: bold;
   margin: 0 auto;
@@ -11,8 +11,6 @@ Button {
 }
 
 button:hover {
-  background-color: #c7e1da;
-  border: 1px solid var(--labelColor);
-  color: #aca7cb;
+  color: #474554;
   cursor: pointer;
 }

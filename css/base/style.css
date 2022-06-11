@@ -22,5 +22,24 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 70vh;
+}
+
+header {
+  background-color: var(--primaryColor);
+  height: 30vh;
+}
+
+header > h1 {
+  color: var(--backgroundColor);
+  font-size: 3rem;
+  font-weight: bold;
+  margin-left: 3rem;
+  padding-top: 3rem;
+}
+
+header > p {
+  color: var(--backgroundColor);
+  margin-left: 3rem;
+  margin-top: 0.5rem;
 }
