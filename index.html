@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/base/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Italiana&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <title>App Ideas - Bin2Dec</title>
   </head>
   <body>
@@ -12,13 +18,13 @@
       <form class="convertForm">
         <section class="convert__input">
           <label for="binary">Binário</label>
-          <input type="text" name="binary" />
+          <input type="text" autocomplete="off" name="binary" />
           <span class="convert__error">valor inválido</span>
         </section>
 
         <section class="convert__input">
           <label for="decimal">Decimal</label>
-          <input type="text" name="decimal" />
+          <input type="text" name="decimal" disabled />
         </section>
 
         <button type="submit">Converter</button>
