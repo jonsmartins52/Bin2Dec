@@ -1,11 +1,21 @@
 @import url(_reset.css);
+@import url(_variables.css);
+@import url("./../components/button.css");
+@import url("./../components/input.css");
+@import url("./../components/span-error.css");
+@import url("./../components/label.css");
+@import url("./../components/form.css");
+@import url("./../components/input-section.css");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #fbfbfb;
+  background-color: var(--backgroundColor);
+  font-family: "Fira Sans", sans-serif;
+  font-family: "Italiana", serif;
+  font-family: "Poppins", sans-serif;
 }
 
 main {
@@ -13,54 +23,4 @@ main {
   align-items: center;
   justify-content: center;
   height: 100vh;
-}
-
-.convertForm {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 50%;
-  width: 80%;
-}
-
-.convert__input {
-  display: flex;
-  flex-direction: column;
-}
-
-.convert__input label {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 0.3rem;
-  margin-left: 0.3rem;
-}
-
-.convert__input input {
-  border: 1px solid #ffdec8;
-  color: #869ea4;
-  font-size: 1.2rem;
-  height: 2.5rem;
-}
-
-.convert__error {
-  color: #ff00eb;
-  display: none;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-  margin-left: 0.5rem;
-}
-
-Button {
-  background-color: #ffdec8;
-  border: none;
-  color: #869ea4;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 0 auto;
-  height: 15%;
-  width: 50%;
-}
-
-button:hover {
-  cursor: pointer;
 }

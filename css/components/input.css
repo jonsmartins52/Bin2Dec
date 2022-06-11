@@ -1,0 +1,6 @@
+.convert__input input {
+  border: 1px solid #ffdec8;
+  color: #869ea4;
+  font-size: var(--fontSize);
+  height: 2.5rem;
+}
