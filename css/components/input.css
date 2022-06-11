@@ -4,3 +4,7 @@
   font-size: var(--fontSize);
   height: 2.5rem;
 }
+
+.convert__input input:focus {
+  outline: 1px solid var(--labelColor);
+}
